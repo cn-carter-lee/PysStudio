@@ -1,0 +1,9 @@
+D:\dev_code\PysStudio\Pys.Data\bin\Debug\Pys.Data.dll
+D:\dev_code\PysStudio\Pys.Data\bin\Debug\Pys.Data.pdb
+D:\dev_code\PysStudio\Pys.Data\bin\Debug\EntityFramework.dll
+D:\dev_code\PysStudio\Pys.Data\bin\Debug\Pys.Entity.dll
+D:\dev_code\PysStudio\Pys.Data\bin\Debug\System.Data.SQLite.dll
+D:\dev_code\PysStudio\Pys.Data\bin\Debug\Pys.Entity.pdb
+D:\dev_code\PysStudio\Pys.Data\obj\Debug\ResolveAssemblyReference.cache
+D:\dev_code\PysStudio\Pys.Data\obj\Debug\Pys.Data.dll
+D:\dev_code\PysStudio\Pys.Data\obj\Debug\Pys.Data.pdb

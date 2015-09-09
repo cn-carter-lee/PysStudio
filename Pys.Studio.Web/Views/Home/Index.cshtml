@@ -1,0 +1,102 @@
+﻿@model Pys.Studio.Web.Models.HomeModel
+@{
+    ViewBag.SeoString = Model.SeoString;
+}
+@ViewBag.ScrollLinkString
+<script language="javascript" type="text/javascript">    var link_url = ["http://www.diy-jeans.com/", "http://www.windwardart.com/home.aspx", "http://www.pysstudio.com/psycase_info.aspx?id=73", "http://www.pysstudio.com/psycase_info.aspx?id=75", "http://www.pysstudio.com/psycase_info.aspx?id=74"];</script>
+<div class="content">
+    <div id="homescroll">
+        <div class="scrollfilter fl" id="fc">
+            <a id="changeurl" href="#nogo" target="_blank">
+                @foreach (var item in Model.ListScrollItems)
+                {       
+                    <img src="@Url.Content(string.Format("~/ImageUpload/about_scroll_{0}.jpg", item.ID))" alt="@Html.Raw(item.Name)" id="@Html.Raw(string.Format("my_pic{0}", item.ID))" class="mscrollpic" />
+                }</a>
+        </div>
+        <div class="scrolltip fr">
+            <ul>
+                @foreach (var item in Model.ListScrollItems)
+                {
+                    <li id="@Html.Raw(string.Format("pic{0}", item.ID))" class="select"><a href="@item.Url">
+                        &nbsp;&nbsp;@item.Title</a></li>   
+                }
+            </ul>
+        </div>
+    </div>
+    <div class="homebox">
+        <div class="box fl">
+            <div class="title">
+                <span class="chi_word">新闻动态</span> | <span class="numletter">NEWS</span></div>
+            <table border="0" cellpadding="0" cellspacing="0" class="list">
+                @foreach (var item in Model.ListNews)
+                {       
+                    <tr>
+                        <td style="height: 24px;">@Html.ActionLink(item.Title, "Info", "News", new { id = item.NewsId }, null)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <div class="box middlebox fl">
+            <div class="title">
+                <span class="chi_word">服务案例</span> | <span class="numletter">SERVICE CASE</span></div>
+            <table border="0" cellpadding="0" cellspacing="0" class="list">
+                @foreach (var item in Model.ListCases)
+                {       
+                    <tr>
+                        <td style="height: 24px;">@Html.ActionLink(item.Title, "Info", "PysCase", new { id = item.CaseId }, null)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <div class="box fr">
+            <div class="title">
+                <span class="chi_word">优秀网站</span> | <span class="numletter">WEBSITE</span></div>
+            <table border="0" cellpadding="0" cellspacing="0" class="list">
+                @foreach (var item in Model.ListSites)
+                {       
+                    <tr>
+                        <td style="height: 24px;">@Html.ActionLink(item.Title, "Info", "site", new { id = item.SiteId }, null)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    var indexvari = 1;
+    var tt;
+    var key = 0;
+    function changeImg() {
+        try {
+            with (fc) {
+                filters[0].Apply();
+            }
+        }
+        catch (err) { }
+        try {
+            for (c = 1; c <= 5; c++) {
+                $("my_pic" + c).className = "hide";
+                $("pic" + c).className = 'unselect';
+            }
+            $("my_pic" + indexvari).className = "showblock"
+            $("pic" + indexvari).className = 'select';
+            $("changeurl").href = link_url[indexvari - 1];
+        }
+        catch (err) { }
+
+        try { with (fc) { filters[0].Play(duration = 2); filters[0].Transition = 23; } } catch (err) { }
+        indexvari++;
+        if (indexvari == 6) indexvari = 1;
+        tt = setTimeout("changeImg()", 3000);
+    }
+
+    function clickchange(num) {
+        indexvari = num;
+        window.clearTimeout(tt);
+        changeImg();
+    }
+    window.onload = changeImg;
+</script>

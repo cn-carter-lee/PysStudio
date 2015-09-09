@@ -1,0 +1,1 @@
+﻿function navsrc(src){try{document.getElementById("iframesrc").src=src;}catch(err){}}

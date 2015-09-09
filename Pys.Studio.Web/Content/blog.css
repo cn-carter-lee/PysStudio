@@ -1,0 +1,182 @@
+﻿body
+{
+    margin: 0;
+    padding: 0;
+    background: url(../images/blog_bg.jpg) center top no-repeat #d9ece8;
+    font-size: 12px;
+}
+.content
+{
+    width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.blogtitle
+{
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+.subtitle
+{
+    margin-top: 10px;
+    font-size: 14px;
+    margin-left: 100px;
+}
+.info_cell
+{
+    background: url(../images/red_flag.gif);
+    background-repeat: no-repeat;
+    font-weight: bold;
+    color: #d3e8b9;
+}
+.titlelink a:link
+{
+    text-decoration: none;
+    color: #555;
+}
+.titlelink a:visited
+{
+    text-decoration: none;
+    color: #555;
+}
+.titlelink a:hover
+{
+    text-decoration: underline;
+    color: #555;
+}
+.titlelink a:active
+{
+    text-decoration: underline;
+    color: #555;
+}
+.articlelink a:link
+{
+    text-decoration: none;
+    color: #69898f;
+    font-size: 16px;
+    font-weight: bold;
+}
+.articlelink a:visited
+{
+    text-decoration: none;
+    color: #69898f;
+    font-size: 16px;
+}
+.articlelink a:hover
+{
+    text-decoration: underline;
+    color: #69898f;
+    font-size: 16px;
+}
+.articlelink a:active
+{
+    text-decoration: underline;
+    color: #69898f;
+    font-size: 16px;
+}
+.boxtitle
+{
+    padding-left: 10px;
+    height: 26px;
+    line-height: 26px;
+    color: #69898f;
+    font-weight: bold;
+    font-size: 12px;
+    background: url(../images/modelhead.png);
+}
+.box_border
+{
+    border: solid 1px #d3d3d3;
+    background: #fff;
+}
+.calendar
+{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.more
+{
+    text-align: right;
+    font-family: 宋体;
+}
+.main
+{
+    width: 100%;
+    margin-top: 50px;
+}
+.leftside
+{
+    width: 200px;
+    float: left;
+}
+.rightside
+{
+    width: 750px;
+    float: right;
+}
+.article
+{
+    padding: 20px 20px 20px 20px;
+    background: #fff;
+}
+.article .title
+{
+    color: #69898f;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.article .title span
+{
+    color: #69898f;
+    font-size: 12px;
+    font-weight: normal;
+}
+.article .articlecontent
+{
+    line-height: 1.5;
+    color: #555;
+    font-size: 12px;
+}
+.clear
+{
+    margin: 0;
+    padding: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    clear: both;
+    overflow: hidden;
+}
+/*Calendar*/
+.pyscalendar
+{
+    width: 100%;
+    color: #000;
+    text-align: center;
+    background-color: #ccc;
+}
+.pyscalendar td
+{
+    background-color: #fff;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.pyscalendar td.today
+{
+    background-color: #ccc;
+    font-weight:bold;
+}
+
+.pyscalendar th
+{
+    background-color: #ccc;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    height: 30px;
+}

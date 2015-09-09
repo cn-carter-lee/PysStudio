@@ -1,0 +1,5 @@
+D:\dev_code\PysStudio\Pys.Utility\bin\Debug\Pys.Utility.dll
+D:\dev_code\PysStudio\Pys.Utility\bin\Debug\Pys.Utility.pdb
+D:\dev_code\PysStudio\Pys.Utility\obj\Debug\ResolveAssemblyReference.cache
+D:\dev_code\PysStudio\Pys.Utility\obj\Debug\Pys.Utility.dll
+D:\dev_code\PysStudio\Pys.Utility\obj\Debug\Pys.Utility.pdb

@@ -1,0 +1,38 @@
+﻿@model Pys.Studio.Web.Models.FunctionIndexModel
+@{
+    ViewBag.SeoString = Model.SeoString;
+}
+<div class="content" style="margin-top: 10px;">
+    <div class="banner">
+    </div>
+    <div class="left_box fl">
+    </div>
+    <div class="rightbox fr hidden">
+        <div class="right_title">
+            <div class="right_title_left">
+                常用模块 | FUNCTION</div>
+            <div class="right_title_right">
+            </div>
+        </div>
+        <div class="right_info_top">
+        </div>
+        <div class="right_into_middle">
+            <table class="" style="width: 680px; font-size: 12px; margin-left: 20px;" cellpadding="0"
+                cellspacing="0">
+                @foreach (var item in Model.ListFunction)
+                {
+                    <tr>
+                        <td class="into_list_title">@Html.ActionLink(item.Title, "Info", "Function", new { id = item.FuncitonId }, null)
+                        </td>
+                        <td class="into_list_time">@item.AddTime.ToString("yyyy-MM-dd")
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <div class="right_info_bottom">
+        </div>
+    </div>
+</div>
+<div class="clear">
+</div>

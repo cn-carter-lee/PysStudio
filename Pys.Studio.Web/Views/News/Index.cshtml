@@ -1,0 +1,38 @@
+﻿@model Pys.Studio.Web.Models.NewsIndexModel
+@{
+    ViewBag.SeoString = Model.SeoString;
+}
+<div class="content" style="margin-top: 10px;">
+    <div class="banner">
+    </div>
+    <div class="left_box fl">
+        <uc3:sites_left_box id="Sites_Left_Box1" runat="server" boxtype="NEWS" />
+    </div>
+    <div class="rightbox fr hidden">
+        <div class="right_title">
+            <div class="right_title_left">
+                新闻中心 | NEWS</div>
+            <div class="right_title_right">
+                新闻分类</div>
+        </div>
+        <div class="right_info_top">
+        </div>
+        <div class="right_into_middle">
+            <table class="" style="width:680px;font-size:12px; margin-left: 20px;" cellpadding="0" cellspacing="0">
+                @foreach (var item in Model.ListNews)
+                {
+                    <tr>
+                        <td class="into_list_title">@Html.ActionLink(item.Title, "Info", "News", new { id = item.NewsId }, null)
+                        </td>
+                        <td class="into_list_time">@item.AddTime.ToString("yyyy-MM-dd")
+                        </td>
+                    </tr>
+                }
+            </table>
+        </div>
+        <div class="right_info_bottom">
+        </div>
+    </div>
+</div>
+<div class="clear">
+</div>

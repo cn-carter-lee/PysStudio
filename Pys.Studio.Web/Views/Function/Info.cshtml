@@ -1,0 +1,35 @@
+﻿@model Pys.Entity.FunctionInfo
+@{
+    ViewBag.SeoString = Model.SeoString;
+}
+<div class="content" style="margin-top: 10px;">
+    <div class="banner">
+    </div>
+    <div class="left_box fl">
+    </div>
+    <div class="rightbox fr hidden">
+        <div class="right_title">
+            <div class="right_title_left">
+                常用模块 | FUNCTION</div>
+            <div class="right_title_right">
+            </div>
+        </div>
+        <div class="right_info_top">
+        </div>
+        <div class="right_into_middle">
+            <div class="info_detail_title">
+                @Model.Title
+            </div>
+            <div class="info_detail_hit">
+                来源： &nbsp;&nbsp;时间：@Model.AddTime.ToString("yyyy-MM-dd")&nbsp;&nbsp【<a href="javascript:history.back()">返
+                    回</a>】</div>
+            <div class="info_detail_content">
+                @Html.Raw(Model.Content)
+            </div>
+        </div>
+        <div class="right_info_bottom">
+        </div>
+    </div>
+</div>
+<div class="clear">
+</div>

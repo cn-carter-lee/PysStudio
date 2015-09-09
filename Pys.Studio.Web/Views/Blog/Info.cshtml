@@ -1,0 +1,73 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd" />
+@using Pys.Utility
+@model Pys.Entity.BlogInfo
+@{
+    this.Layout = "";
+}
+<html>
+<head>
+    @Html.Raw(Model.SeoString)
+    <link rel="Stylesheet" type="text/css" href="@Url.Content("~/Content/blog.css")" />
+</head>
+<body>
+    <div class="content titlelink">
+        <div class="blogtitle">@Html.ActionLink("与你一起飞翔，一个交流合作的平台", "index", "blog")</div>
+        <div class="subtitle">@Html.ActionLink("HTTP://WWW.PYSSTUDIO.COM/BLOG", "index", "blog")</div>
+        <div class="subtitle">@Html.ActionLink("首页", "index", "home") | @Html.ActionLink("博客首页", "index", "blog")
+            | <a href="blog_list.aspx">博文目录</a> | <a href="#">图片</a> | <a href="#">关于我</a></div>
+        <div class="main">
+            <div class="leftside">
+                <div class="box_border">
+                    <div class="boxtitle">
+                        个人资料</div>
+                    <div style="width: 100%; background: #fff; text-align: center;">
+                        <img src="images/180.gif" style="margin-top: 10px; font-size: 10px; margin-bottom: 10px;
+                            width: 180px; height: 180px;" />
+                        <table>
+                            <tr>
+                                <td>
+                                    姓名：
+                                </td>
+                                <td>
+                                    心在飞
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="box_border" style="margin-top: 10px;">
+                    <div class="boxtitle">
+                        日历</div>
+                    <div style="background: #fff; padding: 20px 10px;">
+                        @Html.Raw(ViewBag.Content)
+                    </div>
+                </div>
+            </div>
+            <div class="rightside">
+                <div class="box_border" style="margin-top: 20px; background: #fff;">
+                    <div class="boxtitle">
+                        正文</div>
+                    <div style="background: #fff; padding-left: 10px; padding-right: 10px;">
+                        @Html.Raw(Model.Content)
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+        <div style="width: 100%; margin-top: 30px; text-align: center; line-height: 2; font-size: 12px;
+            color: #555;" class="titlelink">
+        </div>
+        <script type="text/javascript">
+            var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+            document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F97e60c5f58bf505e745b528db115d3b7' type='text/javascript'%3E%3C/script%3E"));
+        </script>
+    </div>
+    <table cellpadding="" cellspacing="">
+        <tr>
+            <th>
+            </th>
+        </tr>
+    </table>
+</body>
+</html>

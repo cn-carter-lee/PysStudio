@@ -1,0 +1,6 @@
+D:\dev_code\PysStudio\Pys.Entity\bin\Debug\Pys.Entity.dll
+D:\dev_code\PysStudio\Pys.Entity\bin\Debug\Pys.Entity.pdb
+D:\dev_code\PysStudio\Pys.Entity\bin\Debug\EntityFramework.dll
+D:\dev_code\PysStudio\Pys.Entity\obj\Debug\ResolveAssemblyReference.cache
+D:\dev_code\PysStudio\Pys.Entity\obj\Debug\Pys.Entity.dll
+D:\dev_code\PysStudio\Pys.Entity\obj\Debug\Pys.Entity.pdb

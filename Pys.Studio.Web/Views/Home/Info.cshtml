@@ -1,0 +1,42 @@
+﻿@model Pys.Studio.Web.Models.HelpInfoModel
+@{    ViewBag.SeoString = Model.HelpInfo.SeoString;}
+    <style type="text/css"> 
+    .banner{width:100%;height:260px;background:url(images/news_banner.gif) top no-repeat;}
+    .news_banner{background:url(images/left_news.jpg) top no-repeat;}
+    </style>
+<div class="content" style="margin-top: 10px;">
+    <div class="banner"></div>
+    <div class="left_box fl">
+        <div class="left_title news_banner">
+        </div>
+        <div class="left_space">
+        </div>
+        <div>
+            <ul>
+                @foreach (var helpInfo in Model.ListHelpInfo)
+                {
+                    <li>@Html.ActionLink(helpInfo.ChineseName, helpInfo.Name)</li>
+                }
+            </ul>
+        </div>
+        <div class="left_bottom">
+        </div>
+    </div>
+    <div class="rightbox fr hidden">
+        <div class="right_title">
+            <div class="right_title_left">@Model.HelpInfo.ChineseName</div>
+            <div class="right_title_right">
+            </div>
+        </div>
+        <div class="right_info_top">
+        </div>
+        <div class="right_into_middle">
+            <div class="info_detail_content">
+                @Html.Raw(Model.HelpInfo.Content)
+            </div>
+        </div>
+        <div class="right_info_bottom">
+        </div>
+    </div>
+</div>
+<div class="clear"></div>

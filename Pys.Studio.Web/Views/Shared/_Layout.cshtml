@@ -1,0 +1,53 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd" />
+<html>
+<head>
+    @Html.Raw(ViewBag.SeoString)
+    @Styles.Render("~/Content/css")
+    <script type="text/javascript" src="@Url.Content("~/Scripts/main.js")"></script>
+</head>
+<body>
+    <div class="top content">
+        <div class="logo fl">
+        </div>
+        <div class="nav fr">
+            <ul>
+                <li id="menu_download" runat="server" onmouseover="overTopMenu(this)" onmouseout="outTopMenu(this)">
+                    <img src="@Url.Content("~/images/menu_download.png")" alt="常用下载" /><br />@Html.ActionLink("文件下载", "Index", "download")</li>
+                <li id="menu_module" runat="server" onmouseover="overTopMenu(this)" onmouseout="outTopMenu(this)">
+                    <img src="@Url.Content("~/images/menu_module.png")" alt="常用模块" /><br />@Html.ActionLink("常用模块", "Index", "function")</li>
+                <li id="menu_news" runat="server" onmouseover="overTopMenu(this)" onmouseout="outTopMenu(this)">
+                    <img src="@Url.Content("~/images/menu_news.png")" alt="新闻中心" /><br />@Html.ActionLink("新闻中心", "Index", "news")</li>
+                <li id="menu_seo" runat="server" onmouseover="overTopMenu(this)" onmouseout="outTopMenu(this)">
+                    <img src="@Url.Content("~/images/menu_seo.png")" alt="SEO优化" /><br />@Html.ActionLink("SEO优化", "Index", "seo")</li>
+                <li id="menu_sites" runat="server" onmouseover="overTopMenu(this)" onmouseout="outTopMenu(this)">
+                    <img src="@Url.Content("~/images/menu_site.png")" alt="优秀网站" /><br />@Html.ActionLink("优秀网站", "Index", "site")</li>
+                <li id="menu_psycase" runat="server" onmouseover="overTopMenu(this)" onmouseout="outTopMenu(this)">
+                    <img src="@Url.Content("~/images/menu_case.png")" alt="服务案例" /><br />@Html.ActionLink("服务案例", "Index", "pyscase")</li>
+                <li id="menu_index" runat="server" onmouseover="overTopMenu(this)" onmouseout="outTopMenu(this)">
+                    <img src="@Url.Content("~/images/menu_home.png")" alt="网站首页" /><br />@Html.ActionLink("网站首页", "Index", "home")</li>
+            </ul>
+        </div>
+        <div class="clear">
+        </div>
+        @RenderBody()
+    </div>
+    <div class="clear">
+    </div>
+    <div class="bottom hidden">
+        @Html.ActionLink("相关声明", "info", "Home", new { name = "statement" }, null)
+        |
+        @Html.ActionLink("联系我们", "info", "Home", new { name = "contact" }, null)
+        |
+        @Html.ActionLink("关于PYS", "info", "Home", new { name = "introduction" }, null)
+        |
+        @Html.ActionLink("友情链接", "info", "Home", new { name = "frdlink" }, null)
+        |
+        @Html.ActionLink("合作伙伴", "parter")
+        |
+        @Html.ActionLink("PYS博客", "index", "blog")
+        <div>
+            COPYRIGHT © 2004-@DateTime.Now.Year PYS STUDIO ALL RIGHTS RESERVED.<a href="http://www.miibeian.gov.cn/"
+                target="_blank">粤ICP备12042886号-1</a></div>
+    </div>
+</body>
+</html>

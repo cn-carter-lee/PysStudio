@@ -1,0 +1,60 @@
+﻿@model Pys.Studio.Web.Models.SiteIndexModel
+@{
+    ViewBag.SeoString = Model.SeoString;
+}
+<div class="content" style="margin-top: 10px;">
+    <div class="banner">
+    </div>
+    <div class="left_box fl">
+    </div>
+    <div class="rightbox fr hidden">
+        <div class="right_title">
+            <div class="right_title_left">
+                优秀网站 | SITE
+            </div>
+            <div class="right_title_right">
+            </div>
+        </div>
+        <div class="right_info_top">
+        </div>
+        <div style="font-size: 12px; background: url(images/right_bg.png) repeat-y">
+            <br />
+            @foreach (var item in Model.ListSites)
+            {
+                <table class="case_tb" border="0" cellpadding="0" cellspacing="0">
+                    <tr>
+                        <td class="image_td" rowspan="4">
+                            <a href="@Url.Action("Info", "site", new { id = item.SiteId })">
+                                <img src="@Url.Content(string.Format("/ImageUpload/{0}", item.ImageName))" alt="@item.Title" />
+                            </a>
+                        </td>
+                        <td style="font-weight: bold; color: #4d545a">
+                            @item.Title
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="color: #afb2b7;">
+                            @item.AddTime.ToString("yyyy-MM-dd")
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            @item.Description
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="" valign="middle" class="detail_td">
+                            @Html.ActionLink("详 细", "Info", "Site", new { id = item.SiteId }, null)
+                        </td>
+                    </tr>
+                </table>
+            }&nbsp;
+        </div>
+        <div class="clear">
+        </div>
+        <div class="right_info_bottom">
+        </div>
+    </div>
+</div>
+<div class="clear">
+</div>
